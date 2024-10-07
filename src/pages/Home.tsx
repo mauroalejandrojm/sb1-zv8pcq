@@ -111,8 +111,8 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Tailor-made Solutions, just for You with Multiple Stacks</h2>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
             <div className='flex flex-col p-0'>
-              <div className="w-auto sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 gap-2 p-4">
-                <div className="grid grid-cols-6 space-y-2 gap-8 items-center justify-center">
+              <div className="w-auto sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-2 p-4">
+                <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 space-y-2 gap-8 items-center justify-center">
                   <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_1} alt="" />
                   <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_2} alt="" />
                   <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_3} alt="" />
