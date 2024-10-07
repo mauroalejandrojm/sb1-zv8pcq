@@ -14,7 +14,38 @@ import logo_9 from '../assets/logos/hf.png';
 import logo_10 from '../assets/logos/keras.png';
 import logo_11 from '../assets/logos/lightning.png';
 import logo_12 from '../assets/logos/torch_ignite.png';
+import logo_13 from '../assets/logos/python.png'
+import logo_14 from '../assets/logos/r.png'
+import logo_15 from '../assets/logos/jupyterlab.png'
+import logo_16 from '../assets/logos/kubernetes.png'
+import logo_17 from '../assets/logos/kubeflow.png'
+import logo_18 from '../assets/logos/aws.png'
+import logo_19 from '../assets/logos/gcp.png'
+import logo_20 from '../assets/logos/azure.png'
 
+
+const logos = [
+  {name: "pytorch", src: logo_1},
+  {name: "tensorflow", src: logo_2},
+  {name: "sklearn", src: logo_3},
+  {name: "collab", src: logo_4},
+  {name: "kaggle", src: logo_5},
+  {name: "pandas", src: logo_6},
+  {name: "dmlc", src: logo_7},
+  {name: "fastai", src: logo_8},
+  {name: "huggingface", src: logo_9},
+  {name: "keras", src: logo_10},
+  {name: "lighningai", src: logo_11},
+  {name: "torchignite", src: logo_12},
+  {name: "python", src: logo_13},
+  {name: "r", src: logo_14},
+  {name: "jupyterlab", src: logo_15},
+  {name: "kubernetes", src: logo_16},
+  {name: "kubeflow", src: logo_17},
+  {name: "aws", src: logo_18},
+  {name: "gcp", src: logo_19},
+  {name: "azure", src: logo_20}
+]
 
 const Home: React.FC = () => {
   return (
@@ -108,23 +139,18 @@ const Home: React.FC = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Tailor-made Solutions, just for You with Multiple Stacks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
+          <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
+            Tailor-made Solutions, just for You with Multiple Stacks
+          </h2>
+          <div className="logo-grid-container grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
             <div className='flex flex-col p-0'>
               <div className="w-auto sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-2 p-4">
-                <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 space-y-2 gap-8 items-center justify-center">
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_1} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_2} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_3} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_4} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_5} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_6} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_7} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_8} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_9} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_10} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_11} alt="" />
-                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_12} alt="" />
+                <div className="grid grid-cols-4 logo-grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 space-y-2 justify-center gap-8">
+                  {logos.map((logo) => (
+                  <div key={logo.name} className="logo-item">
+                    <img loading='lazy' src={logo.src} alt={logo.name} className="logo-image grayscale hover:grayscale-0 block w-auto h-16 object-contain rounded-md" />
+                  </div>
+                ))}
                 </div>
               </div> 
             </div>
