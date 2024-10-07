@@ -113,18 +113,18 @@ const Home: React.FC = () => {
             <div className='flex flex-col p-0'>
               <div className="w-auto sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 gap-2 p-4">
                 <div className="grid grid-cols-6 space-y-2 gap-8 items-center justify-center">
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_1} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_2} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_3} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_4} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_5} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_6} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_7} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_8} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_9} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_10} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_11} alt="" />
-                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_12} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_1} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_2} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_3} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_4} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_5} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_6} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_7} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_8} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_9} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_10} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_11} alt="" />
+                  <img loading="lazy" className="grayscale hover:grayscale-0 block w-32 h-12 object-contain rounded-md" src={logo_12} alt="" />
                 </div>
               </div> 
             </div>
