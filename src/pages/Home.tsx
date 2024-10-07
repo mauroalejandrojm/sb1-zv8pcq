@@ -142,15 +142,15 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
             Tailor-made Solutions, just for You with Multiple Stacks
           </h2>
-          <div className="logo-grid-container grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
-            <div className='flex flex-col p-0'>
-              <div className="w-auto sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-2 p-4">
-                <div className="grid grid-cols-4 logo-grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 space-y-2 justify-center gap-8">
+          <div className="logo-grid-container grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
+            <div className='flex w-auto flex-col p-0'>
+              <div className="w-auto sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-2 p-2">
+                <div className="flex flex-wrap w-auto space-y-2 justify-center items-center gap-8 p-0">
                   {logos.map((logo) => (
-                  <div key={logo.name} className="logo-item">
-                    <img loading='lazy' src={logo.src} alt={logo.name} className="logo-image grayscale hover:grayscale-0 block w-auto h-16 object-contain rounded-md" />
-                  </div>
-                ))}
+                    <div key={logo.name} className="logo-item">
+                      <img loading='lazy' src={logo.src} alt={logo.name} className="logo-image grayscale hover:grayscale-0 block w-auto h-8 object-contain rounded-md" />
+                    </div>
+                  ))}
                 </div>
               </div> 
             </div>

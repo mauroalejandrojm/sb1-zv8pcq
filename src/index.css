@@ -47,20 +47,23 @@
 
 .logo-grid-container {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 }
 
 .logo-grid {
-  display: grid;
+  /* display: grid; */
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-item {
   padding: 0px;
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
 }
 
