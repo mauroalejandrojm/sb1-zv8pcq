@@ -2,6 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Brain, BarChart, Briefcase, ChevronRight, Bot, Database, LineChart, TrendingUp, ShieldCheck, Stethoscope } from 'lucide-react'
 import HeroAnimation from '../components/HeroAnimation'
+import logo_1 from '../assets/logos/pytorch.png';
+import logo_2 from '../assets/logos/tensor_flow.png';
+import logo_3 from '../assets/logos/sklearn.png';
+import logo_4 from '../assets/logos/collab.png';
+import logo_5 from '../assets/logos/kaggle.png';
+import logo_6 from '../assets/logos/pandas.png';
+import logo_7 from '../assets/logos/dmlc.png';
+import logo_8 from '../assets/logos/fast_ai.png';
+import logo_9 from '../assets/logos/hf.png';
+import logo_10 from '../assets/logos/keras.png';
+import logo_11 from '../assets/logos/lightning.png';
+import logo_12 from '../assets/logos/torch_ignite.png';
+
 
 const Home: React.FC = () => {
   return (
@@ -96,10 +109,25 @@ const Home: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Tailor-made solutions, just for You with multiple stacks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="grid grid-cols-3 gap-2 p-4">
-            <img loading="lazy" className="w-full h-auto object-cover rounded-md" src="https://dagshub.com/wp-content/uploads/2024/04/0937afec087e6bb2a075736b38723482.png" alt="" />
-          </div> 
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className='flex flex-col p-0'>
+              <div className="w-auto sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 gap-2 p-4">
+                <div className="grid grid-cols-6 space-y-2 gap-8 items-center justify-center">
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_1} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_2} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_3} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_4} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_5} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_6} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_7} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_8} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_9} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_10} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_11} alt="" />
+                  <img loading="lazy" className="block w-32 h-12 object-contain rounded-md" src={logo_12} alt="" />
+                </div>
+              </div> 
+            </div>
           </div>
         </div>
       </section>
