@@ -14,15 +14,11 @@ const Contact: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <Mail className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-2" />
-              <span className="text-gray-700 dark:text-gray-300">info@madnesslab.com</span>
-            </div>
-            <div className="flex items-center">
-              <Phone className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-2" />
-              <span className="text-gray-700 dark:text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-700 dark:text-gray-300">madnesslabdev@gmail.com</span>
             </div>
             <div className="flex items-center">
               <MapPin className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-2" />
-              <span className="text-gray-700 dark:text-gray-300">123 AI Street, Tech City, TC 12345</span>
+              <span className="text-gray-700 dark:text-gray-300">Barranquilla, Colombia</span>
             </div>
           </div>
         </div>

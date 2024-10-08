@@ -1,24 +1,28 @@
 import React from 'react'
 import { Bot, Database, LineChart } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const products = [
   {
     icon: Bot,
     name: 'AI Assistant',
     description: 'An intelligent chatbot powered by advanced natural language processing.',
-    features: ['24/7 customer support', 'Multi-language support', 'Customizable responses']
+    features: ['24/7 customer support', 'Multi-language support', 'Customizable responses'],
+    link: "/products/ai-assistant",
   },
   {
     icon: Database,
     name: 'Data Vault',
     description: 'Secure and scalable data storage solution with built-in analytics capabilities.',
-    features: ['End-to-end encryption', 'Real-time backups', 'Advanced access controls']
+    features: ['End-to-end encryption', 'Real-time backups', 'Advanced access controls'],
+    link: "/products/data-vault",
   },
   {
     icon: LineChart,
     name: 'Insight Engine',
     description: 'Powerful analytics tool that turns raw data into actionable business insights.',
-    features: ['Predictive analytics', 'Custom dashboards', 'Automated reporting']
+    features: ['Predictive analytics', 'Custom dashboards', 'Automated reporting'],
+    link: "/products/insight-engine",
   }
 ]
 
@@ -36,7 +40,7 @@ const Products: React.FC = () => {
               <ul className="space-y-2">
                 {product.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-700 dark:text-gray-300">
-                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 mr-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                       <path d="M5 13l4 4L19 7"></path>
                     </svg>
                     {feature}
@@ -45,9 +49,9 @@ const Products: React.FC = () => {
               </ul>
             </div>
             <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
-              <button className="w-full btn btn-primary">
+              <Link to={product.link} className="w-full btn btn-primary">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         ))}

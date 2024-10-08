@@ -8,6 +8,9 @@ import Services from './pages/Services'
 import Industries from './pages/Industries'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
+import AIAssistant from './pages/AIAssistant'
+import DataVault from './pages/DataVault'
+import InsightEngine from './pages/InsightEngine'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -38,6 +41,9 @@ function App() {
             <Route path="/industries" element={<Industries />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products/ai-assistant" element={<AIAssistant />} />
+            <Route path="/products/data-vault" element={<DataVault />} />
+            <Route path="/products/insight-engine" element={<InsightEngine />} />
           </Routes>
         </main>
         <Footer />
