@@ -41,6 +41,7 @@ const Contact: React.FC = () => {
       const response = await fetch(import.meta.env.VITE_GOOGLE_SHEET_WEB_URL!,
           {
               method: 'POST',
+              mode: 'cors',
               body: dataToSubmit,
           }
       );
