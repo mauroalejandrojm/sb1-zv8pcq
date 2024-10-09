@@ -45,12 +45,11 @@ const Contact: React.FC = () => {
               body: dataToSubmit,
           }
       );
-
+      console.log(response);
       if (response.ok) {
           setFormSubmitted(true);
       }
     } catch (error) {
-        
         setFormSubmitted(true);
     }
   };
