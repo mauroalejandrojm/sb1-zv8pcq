@@ -57,9 +57,9 @@ const Industries: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">{industry.name}</h2>
             <h3 className="text-lg font-medium text-indigo-600 dark:text-indigo-400 mb-2">{industry.application}</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">{industry.description}</p>
-            <div className="bg-indigo-100 dark:bg-indigo-900 rounded-lg p-4">
-              <h4 className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2">Impact:</h4>
-              <p className="text-indigo-700 dark:text-indigo-300">{industry.impact}</p>
+            <div className="bg-violet-100 dark:bg-indigo-900 rounded-lg p-4">
+              <h4 className="font-semibold text-indigo-800 dark:text-indigo-100 mb-2">Impact:</h4>
+              <p className="text-indigo-700 dark:text-indigo-200">{industry.impact}</p>
             </div>
           </div>
         ))}

@@ -83,7 +83,7 @@ const Pricing: React.FC = () => {
       <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12">Pricing Plans</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {plans.map((plan, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col">
+          <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition duration-300 overflow-hidden flex flex-col">
             <div className="p-6 flex-grow">
               <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">{plan.name}</h2>
               <p className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{plan.price}</p>
