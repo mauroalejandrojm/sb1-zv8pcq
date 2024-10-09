@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
       for (const key of Object.keys(formData) as (keyof FormData)[]) {
           dataToSubmit.append(key, formData[key]);
       }
-      
+      console.log(process.env.REACT_APP_GOOGLE_SHEET_WEB_URL)
       const response = await fetch(process.env.REACT_APP_GOOGLE_SHEET_WEB_URL!,
           {
               method: 'POST',
