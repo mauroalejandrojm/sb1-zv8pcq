@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
       for (const key of Object.keys(formData) as (keyof FormData)[]) {
           dataToSubmit.append(key, formData[key]);
       }
-      console.log(import.meta.env.VITE_GOOGLE_SHEET_WEB_URL)
+      
       const response = await fetch(import.meta.env.VITE_GOOGLE_SHEET_WEB_URL!,
           {
               method: 'POST',
@@ -46,13 +46,10 @@ const Contact: React.FC = () => {
       );
 
       if (response.ok) {
-          console.log('Form submitted successfully');
           setFormSubmitted(true);
-      } else {
-          console.error('Failed to submit form');
       }
     } catch (error) {
-        console.error('Error submitting form:', error);
+        
         setFormSubmitted(true);
     }
   };
