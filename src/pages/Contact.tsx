@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <Mail className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-2" />
-              <span className="text-gray-700 dark:text-gray-300">madnesslabdev@gmail.com</span>
+              <span className="text-gray-700 dark:text-gray-300">mail@madnesslab.dev</span>
             </div>
             <div className="flex items-center">
               <MapPin className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-2" />
