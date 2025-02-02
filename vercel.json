@@ -1,15 +1,4 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Encoding",
-          "value": "br"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
