@@ -2,16 +2,14 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './src/**/*.tsx', // Adjust for React/TSX files
+    './src/**/*.jsx',
+    './src/**/*.js',
+    './public/index.html'
   ],
   darkMode: 'class',
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [],
-  purge: ['./src/**/*.tsx', './public/index.html'],
 }
