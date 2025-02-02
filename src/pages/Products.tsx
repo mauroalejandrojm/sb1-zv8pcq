@@ -49,7 +49,7 @@ const Products: React.FC = () => {
               </ul>
             </div>
             <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
-              <Link aria-label="internal link of the website to learn more about the product" to={product.link} className="w-full btn btn-primary">
+              <Link aria-label={product.description} to={product.link} className="w-full btn btn-primary">
                 Learn More
               </Link>
             </div>
