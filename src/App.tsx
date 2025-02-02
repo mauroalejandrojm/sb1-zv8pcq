@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Services from './pages/Services'
-import Industries from './pages/Industries'
-import Pricing from './pages/Pricing'
-import Contact from './pages/Contact'
-import AIAssistant from './pages/AIAssistant'
-import DataVault from './pages/DataVault'
-import InsightEngine from './pages/InsightEngine'
+const Header = React.lazy(() => import('./components/Header'))
+const Footer = React.lazy(() => import('./components/Footer'))
+const Home = React.lazy(() => import('./pages/Home'))
+const Products = React.lazy(() => import('./pages/Products'))
+const Services = React.lazy(() => import('./pages/Services'))
+const Industries = React.lazy(() => import('./pages/Industries'))
+const Pricing = React.lazy(() => import('./pages/Pricing'))
+const Contact = React.lazy(() => import('./pages/Contact'))
+const AIAssistant = React.lazy(() => import('./pages/AIAssistant'))
+const DataVault = React.lazy(() => import('./pages/DataVault'))
+const InsightEngine = React.lazy(() => import('./pages/InsightEngine'))
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)

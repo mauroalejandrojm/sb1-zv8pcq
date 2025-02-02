@@ -13,4 +13,5 @@ export default {
     },
   },
   plugins: [],
+  purge: ['./src/**/*.tsx', './public/index.html'],
 }
