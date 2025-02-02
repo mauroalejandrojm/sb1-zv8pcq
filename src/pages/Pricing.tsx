@@ -97,7 +97,7 @@ const Pricing: React.FC = () => {
               </ul>
             </div>
             <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
-              <button className="w-full btn btn-primary">
+              <button id="contact-redirect" aria-label="contact-redirect" className="w-full btn btn-primary">
                 Choose Plan
               </button>
             </div>

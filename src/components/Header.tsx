@@ -30,17 +30,19 @@ const Header: React.FC<{ darkMode: boolean; toggleDarkMode: () => void }> = ({ d
     <header className="bg-white dark:bg-gray-800 shadow-sm">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center" aria-label="madnessLab home redirect">
             <MLLogo />
             <span className="ml-2 text-xl font-bold text-gray-800 dark:text-white">madnessLab</span>
           </Link>
           <div className="hidden md:flex items-center space-x-6">
             {menuItems.map((item) => (
-              <Link key={item.to} to={item.to} className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
+              <Link key={item.to} to={item.to} className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400" aria-label="menu item redirect of the website">
                 {item.label}
               </Link>
             ))}
             <button
+              id="dark-mode-toggle"
+              aria-label="Toggle Dark Mode"
               onClick={toggleDarkMode}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
             >
@@ -49,12 +51,16 @@ const Header: React.FC<{ darkMode: boolean; toggleDarkMode: () => void }> = ({ d
           </div>
           <div className="md:hidden flex items-center">
             <button
+              id="dark-mode-toggle"
+              aria-label="Toggle Dark Mode"
               onClick={toggleDarkMode}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 mr-2"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button
+              id="menu-toggle"
+              aria-label="Toggle Menu"
               onClick={toggleMenu}
               className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
@@ -66,6 +72,7 @@ const Header: React.FC<{ darkMode: boolean; toggleDarkMode: () => void }> = ({ d
           <div className="md:hidden mt-4">
             {menuItems.map((item) => (
               <Link
+                aria-label='menu item redirect of the website'
                 key={item.to}
                 to={item.to}
                 className="block py-2 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"

@@ -46,21 +46,21 @@ const DataVault: React.FC = () => {
         <div className="max-w-3xl mx-auto">
           <ol className="relative border-l border-gray-200 dark:border-gray-700">
             <li className="mb-10 ml-6">
-            <span className="absolute flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-violet-200">
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-violet-200">
                 <Database className="w-5 h-5 text-indigo-600 dark:text-indigo-600" />
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Data Ingestion</h3>
               <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-300">Securely ingest data from various sources using our API or data connectors.</p>
             </li>
             <li className="mb-10 ml-6">
-            <span className="absolute flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-violet-200">
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-violet-200">
                 <Lock className="w-5 h-5 text-indigo-600 dark:text-indigo-600" />
               </span>
               <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Encryption and Storage</h3>
               <p className="text-base font-normal text-gray-500 dark:text-gray-300">Data is encrypted and stored in our secure, distributed storage system.</p>
             </li>
             <li className="ml-6">
-            <span className="absolute flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-violet-200">
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-violet-200">
                 <RefreshCw className="w-5 h-5 text-indigo-600 dark:text-indigo-600" />
               </span>
               <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Access and Analysis</h3>
@@ -75,8 +75,8 @@ const DataVault: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Ready to secure and leverage your data?</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">Start using Data Vault today and unlock the full potential of your data assets.</p>
-            <Link to="/contact" className="btn btn-primary text-indigo-600 dark:text-indigo-100 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">
-                Request a Demo
+            <Link to="/contact" aria-label="contact redirect of the website" className="btn btn-primary text-indigo-600 dark:text-indigo-100 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">
+              Request a Demo
             </Link>
           </div>
         </div>

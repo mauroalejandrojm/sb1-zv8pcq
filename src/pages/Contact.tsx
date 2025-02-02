@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Mail, MapPin } from 'lucide-react'
 
 
@@ -14,43 +14,43 @@ const Contact: React.FC = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e:  React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Simulate form submission (you can add your logic here to send the data)
     console.log("Form submitted!");
     try {
-        await submitForm(formData, setFormSubmitted);
-        setFormData({ name: '', email: '', message: '' });
+      await submitForm(formData, setFormSubmitted);
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-        console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error);
     }
   };
 
   const submitForm = async (formData: FormData,
     setFormSubmitted: React.Dispatch<React.SetStateAction<boolean>>) => {
-    
+
     const dataToSubmit = new FormData();
     try {
       for (const key of Object.keys(formData) as (keyof FormData)[]) {
-          dataToSubmit.append(key, formData[key]);
+        dataToSubmit.append(key, formData[key]);
       }
-      
+
       const response = await fetch(import.meta.env.VITE_GOOGLE_SHEET_WEB_URL!,
-          {
-              method: 'POST',
-              mode: 'cors',
-              body: dataToSubmit,
-          }
+        {
+          method: 'POST',
+          mode: 'cors',
+          body: dataToSubmit,
+        }
       );
       console.log(response);
       if (response.ok) {
-          setFormSubmitted(true);
+        setFormSubmitted(true);
       }
     } catch (error) {
-        setFormSubmitted(true);
+      setFormSubmitted(true);
     }
   };
 
@@ -89,17 +89,19 @@ const Contact: React.FC = () => {
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></textarea>
             </div>
             <div>
-              <button 
-              type="submit"
-              className={`w-full btn btn-primary ${formSubmitted ? 'opacity-50 cursor-not-allowed' : ''}`}
-              disabled={formSubmitted}
+              <button
+                id="form-submit"
+                aria-label='form-submit'
+                type="submit"
+                className={`w-full btn btn-primary ${formSubmitted ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={formSubmitted}
               >{formSubmitted ? 'Message Sent!' : 'Send Message'}
               </button>
               {formSubmitted && (
-                  <div className="text-sm font-bold text-indigo-900 dark:text-gray-300 text-center mt-8">
-                      We answer all email and requests as they come in. 
-                      We’ll get back to you as soon as possible. Thank you!
-                  </div>
+                <div className="text-sm font-bold text-indigo-900 dark:text-gray-300 text-center mt-8">
+                  We answer all email and requests as they come in.
+                  We’ll get back to you as soon as possible. Thank you!
+                </div>
               )}
             </div>
           </form>

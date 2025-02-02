@@ -75,8 +75,8 @@ const AIAssistant: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Ready to transform your customer support?</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">Get started with our AI Assistant today and experience the future of customer interaction.</p>
-            <Link to="/contact" className="btn btn-primary text-indigo-600 dark:text-indigo-100 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">
-                Request a Demo
+            <Link to="/contact" aria-label="contact redirect of the website" className="btn btn-primary text-indigo-600 dark:text-indigo-100 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">
+              Request a Demo
             </Link>
           </div>
         </div>

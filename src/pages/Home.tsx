@@ -25,26 +25,26 @@ import logo_20 from '../assets/logos/azure.png'
 
 
 const logos = [
-  {name: "pytorch", src: logo_1},
-  {name: "tensorflow", src: logo_2},
-  {name: "sklearn", src: logo_3},
-  {name: "collab", src: logo_4},
-  {name: "kaggle", src: logo_5},
-  {name: "pandas", src: logo_6},
-  {name: "dmlc", src: logo_7},
-  {name: "fastai", src: logo_8},
-  {name: "huggingface", src: logo_9},
-  {name: "keras", src: logo_10},
-  {name: "lighningai", src: logo_11},
-  {name: "torchignite", src: logo_12},
-  {name: "python", src: logo_13},
-  {name: "r", src: logo_14},
-  {name: "jupyterlab", src: logo_15},
-  {name: "kubernetes", src: logo_16},
-  {name: "kubeflow", src: logo_17},
-  {name: "aws", src: logo_18},
-  {name: "gcp", src: logo_19},
-  {name: "azure", src: logo_20}
+  { name: "pytorch", src: logo_1 },
+  { name: "tensorflow", src: logo_2 },
+  { name: "sklearn", src: logo_3 },
+  { name: "collab", src: logo_4 },
+  { name: "kaggle", src: logo_5 },
+  { name: "pandas", src: logo_6 },
+  { name: "dmlc", src: logo_7 },
+  { name: "fastai", src: logo_8 },
+  { name: "huggingface", src: logo_9 },
+  { name: "keras", src: logo_10 },
+  { name: "lighningai", src: logo_11 },
+  { name: "torchignite", src: logo_12 },
+  { name: "python", src: logo_13 },
+  { name: "r", src: logo_14 },
+  { name: "jupyterlab", src: logo_15 },
+  { name: "kubernetes", src: logo_16 },
+  { name: "kubeflow", src: logo_17 },
+  { name: "aws", src: logo_18 },
+  { name: "gcp", src: logo_19 },
+  { name: "azure", src: logo_20 }
 ]
 
 const Home: React.FC = () => {
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
             Transform your business with cutting-edge AI solutions, data-driven insights, and expert consulting.
           </p>
-          <Link to="/contact" className="btn btn-primary">
+          <Link to="/contact" aria-label="contact redirect of the website" className="btn btn-primary text-indigo-600 dark:text-indigo-100 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">
             Get Started
           </Link>
         </div>
@@ -118,20 +118,20 @@ const Home: React.FC = () => {
             <div className="border-l-4 border-gray-500 dark:border-gray-400 dark:bg-gray-800 p-6">
               <h3 className="text-xl font-semibold mb-2">Step 1: Data Collection</h3>
               <p className="text-gray-600 dark:text-gray-300">
-              We begin by gathering data from various sources tailored to your needs. This foundational step ensures that we have the right information to analyze.
+                We begin by gathering data from various sources tailored to your needs. This foundational step ensures that we have the right information to analyze.
               </p>
             </div>
             <div className="border-l-4 border-gray-50 dark:border-gray-800 dark:bg-gray-800 p-6">
               <h3 className="text-xl font-semibold mb-2">Step 2: Data Analysis</h3>
               <p className="text-gray-600 dark:text-gray-300">
-              Our advanced AI algorithms process the collected data, uncovering patterns and trends. This analysis transforms raw data into meaningful information.
+                Our advanced AI algorithms process the collected data, uncovering patterns and trends. This analysis transforms raw data into meaningful information.
               </p>
             </div>
             <div className="border-l-4 border-gray-50 dark:border-gray-800 dark:bg-gray-800 p-6">
               <h3 className="text-xl font-semibold mb-2">Step 3: Actionable Insights</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Finally, we present you with actionable insights that inform your strategy. With our support, you can make informed decisions that propel your business forward.
-                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -148,11 +148,11 @@ const Home: React.FC = () => {
                 <div className="flex flex-wrap w-auto space-y-2 justify-center items-center gap-8 p-0">
                   {logos.map((logo) => (
                     <div key={logo.name} className="logo-item">
-                      <img loading='lazy' src={logo.src} alt={logo.name} className="logo-image grayscale hover:grayscale-0 block w-auto h-8 object-contain rounded-md" />
+                      <img width={140} height={60} loading='lazy' src={logo.src} alt={logo.name} className="logo-image grayscale hover:grayscale-0 block w-auto h-8 object-contain rounded-md" />
                     </div>
                   ))}
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-indigo-100 mb-8">Explore our flexible pricing options and find the perfect plan for your needs.</p>
-          <Link to="/pricing" className="btn bg-white text-indigo-600 hover:bg-indigo-100">View Pricing</Link>
+          <Link to="/pricing" aria-label="pricing redirect of the website" className="btn bg-white text-indigo-600 hover:bg-indigo-100">View Pricing</Link>
         </div>
       </section>
     </div>
