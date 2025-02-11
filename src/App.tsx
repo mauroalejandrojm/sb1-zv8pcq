@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 const Header = React.lazy(() => import('./components/Header'))
 const Footer = React.lazy(() => import('./components/Footer'))
@@ -32,21 +32,23 @@ function App() {
   return (
     <Router>
       <div className={`min-h-screen flex flex-col ${darkMode ? 'dark' : ''}`}>
-        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <main className="flex-grow bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/industries" element={<Industries />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/products/ai-assistant" element={<AIAssistant />} />
-            <Route path="/products/data-vault" element={<DataVault />} />
-            <Route path="/products/insight-engine" element={<InsightEngine />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
+          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <main className="flex-grow bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/industries" element={<Industries />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/products/ai-assistant" element={<AIAssistant />} />
+              <Route path="/products/data-vault" element={<DataVault />} />
+              <Route path="/products/insight-engine" element={<InsightEngine />} />
+            </Routes>
+          </main>
+          <Footer />
+        </Suspense>
       </div>
     </Router>
   )
