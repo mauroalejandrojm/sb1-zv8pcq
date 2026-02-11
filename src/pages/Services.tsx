@@ -4,33 +4,33 @@ import { Brain, BarChart, Briefcase, Code, Users, Zap } from 'lucide-react'
 const services = [
   {
     icon: Brain,
-    name: 'AI Consulting',
-    description: 'Expert guidance on integrating AI into your business processes for maximum efficiency and innovation.'
+    name: 'AI Knowledge Systems (RAG)',
+    description: 'We build intelligent internal knowledge assistants that search, understand, and answer from your company data using advanced retrieval systems.'
   },
   {
     icon: BarChart,
-    name: 'Data Analysis',
-    description: 'In-depth analysis of your data to uncover insights and drive informed decision-making.'
+    name: 'Advanced Analytics & Insight Engines',
+    description: 'Transform raw data into predictive dashboards, automated reports, and strategic insights tailored to your business goals.'
   },
   {
     icon: Briefcase,
-    name: 'Business Strategy',
-    description: 'Comprehensive business consulting to optimize your operations and achieve sustainable growth.'
+    name: 'AI for Operations & Project Management',
+    description: 'Deploy AI-powered assistants to automate workflows, summarize projects, track progress, and improve team productivity.'
   },
   {
     icon: Code,
-    name: 'Custom AI Development',
-    description: 'Tailored AI solutions designed and developed to address your specific business challenges.'
+    name: 'Custom AI Integration',
+    description: 'Integrate AI directly into your existing tools, CRMs, databases, and workflows with secure and scalable architecture.'
   },
   {
     icon: Users,
-    name: 'AI Training & Workshops',
-    description: 'Educational programs to empower your team with AI knowledge and skills.'
+    name: 'AI Implementation & Enablement',
+    description: 'We guide your team through AI adoption with hands-on onboarding, documentation, and structured rollout plans.'
   },
   {
     icon: Zap,
-    name: 'Process Automation',
-    description: 'Streamline your workflows with intelligent automation powered by AI and machine learning.'
+    name: 'Intelligent Process Automation',
+    description: 'Automate repetitive tasks using AI-driven systems that reduce costs and free your team for higher-value work.'
   }
 ]
 
