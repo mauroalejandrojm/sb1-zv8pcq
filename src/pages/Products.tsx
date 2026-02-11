@@ -5,23 +5,38 @@ import { Link } from 'react-router-dom'
 const products = [
   {
     icon: Bot,
-    name: 'AI Assistant',
-    description: 'An intelligent chatbot powered by advanced natural language processing.',
-    features: ['24/7 customer support', 'Multi-language support', 'Customizable responses'],
+    name: 'Wiki Weaver',
+    description: 'Turn your company knowledge into an AI that actually answers questions correctly. Keep sensitive information secure from outsiders while giving your team full access.',
+    features: [
+      'Connects to your internal docs (Notion, PDFs, Confluence, Drive)', 
+      'Creates a reliable AI assistant grounded in your data', 
+      'Eliminates repeated internal questions',
+      'Protect your data from'
+    ],
     link: "/products/ai-assistant",
   },
   {
     icon: Database,
-    name: 'Data Vault',
-    description: 'Secure and scalable data storage solution with built-in analytics capabilities.',
-    features: ['End-to-end encryption', 'Real-time backups', 'Advanced access controls'],
+    name: 'PM Assistant',
+    description: 'Your AI teammate for project planning, reporting & task tracking.',
+    features: [
+      'Ensure project guidelines with your team', 
+      'Predict delays before they happen', 
+      'Analyze the content of your tools without leaving the apps',
+      'Generate Gantt Charts to share your progress smootly'
+    ],
     link: "/products/data-vault",
   },
   {
     icon: LineChart,
     name: 'Insight Engine',
-    description: 'Powerful analytics tool that turns raw data into actionable business insights.',
-    features: ['Predictive analytics', 'Custom dashboards', 'Automated reporting'],
+    description: 'Ask your data questions in plain English (or any language) — get real business answers.',
+    features: [
+      'Natural language queries over your database',
+      'Instant dashboards without manual setup', 
+      'Predict revenue trends & churn risk',
+      'Automated executive-ready reports'
+    ],
     link: "/products/insight-engine",
   }
 ]
