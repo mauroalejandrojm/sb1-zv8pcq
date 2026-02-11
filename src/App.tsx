@@ -11,6 +11,7 @@ const Contact = React.lazy(() => import('./pages/Contact'))
 const AIAssistant = React.lazy(() => import('./pages/AIAssistant'))
 const DataVault = React.lazy(() => import('./pages/DataVault'))
 const InsightEngine = React.lazy(() => import('./pages/InsightEngine'))
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'))
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -45,6 +46,7 @@ function App() {
               <Route path="/products/ai-assistant" element={<AIAssistant />} />
               <Route path="/products/data-vault" element={<DataVault />} />
               <Route path="/products/insight-engine" element={<InsightEngine />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
           </main>
           <Footer />
