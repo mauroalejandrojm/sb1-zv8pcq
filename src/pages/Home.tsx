@@ -67,8 +67,7 @@ const Home: React.FC = () => {
             <span className="text-indigo-600 dark:text-indigo-400"> Intelligent Systems</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            We design and deploy AI-powered knowledge assistants, analytics engines,
-            and automation systems for growing teams overwhelmed by information.
+            We build AI assistants, analytics tools, and automation systems for teams overwhelmed by data.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
@@ -191,7 +190,7 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Transforming Data into Actionable Insights</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="border-l-4 border-gray-500 dark:border-gray-400 dark:bg-gray-800 p-6">
-              <h3 className="text-xl font-semibold mb-2">01 — Centralize & Structure Your Data</h3>
+              <h3 className="text-xl font-semibold mb-2">01 — Structure Your Data</h3>
               <p className="text-gray-600 dark:text-gray-300">
               We consolidate fragmented data sources, documents, and internal systems
           into structured knowledge layers ready for AI-powered retrieval and analysis.
