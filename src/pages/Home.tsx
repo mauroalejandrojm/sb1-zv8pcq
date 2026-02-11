@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Brain, BarChart, Briefcase, ChevronRight, Bot, Database, LineChart, TrendingUp, ShieldCheck, Stethoscope } from 'lucide-react'
+import LavaBackground from '../components/LavaBackground'
 import HeroAnimation from '../components/HeroAnimation'
 import logo_1 from '../assets/logos/pytorch.png';
 import logo_2 from '../assets/logos/tensor_flow.png';
@@ -51,6 +52,12 @@ const Home: React.FC = () => {
   return (
     <div>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <LavaBackground />  
+      <div className="pointer-events-none absolute inset-0 z-0 
+          bg-gradient-to-b 
+          from-white via-transparent to-white
+          dark:from-gray-800 dark:to-gray-650" 
+        />
         <HeroAnimation />
         <div className="container mx-auto px-6 text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-4">
