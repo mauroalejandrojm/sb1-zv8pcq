@@ -62,7 +62,7 @@ const Home: React.FC = () => {
         />
         <HeroAnimation />
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
             Turn Your Company Knowledge & Data Into
             <span className="text-indigo-600 dark:text-indigo-400"> Intelligent Systems</span>
           </h1>
