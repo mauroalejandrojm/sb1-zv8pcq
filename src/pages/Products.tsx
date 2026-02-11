@@ -18,7 +18,7 @@ const products = [
   {
     icon: Database,
     name: 'PM Assistant',
-    description: 'Your AI teammate for project planning, reporting & task tracking.',
+    description: 'Your AI teammate for project planning, reporting & task tracking. Created for Product Managers, Startup founders, Tech teams. Compatible with any existent PM tool.',
     features: [
       'Ensure project guidelines with your team', 
       'Predict delays before they happen', 
