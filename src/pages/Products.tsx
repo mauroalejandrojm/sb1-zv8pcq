@@ -30,7 +30,7 @@ const products = [
   {
     icon: LineChart,
     name: 'Insight Engine',
-    description: 'Ask your data questions in plain English (or any language) — get real business answers.',
+    description: 'Ask your data questions in plain English (or any language) — get real business answers. Stop waiting on analysts. Get answers in seconds.',
     features: [
       'Natural language queries over your database',
       'Instant dashboards without manual setup', 
