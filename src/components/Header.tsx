@@ -21,7 +21,7 @@ const Header: React.FC<{ darkMode: boolean; toggleDarkMode: () => void }> = ({ d
   const menuItems = [
     { to: "/products", label: "Products" },
     { to: "/services", label: "Services" },
-    { to: "/industries", label: "Industries" },
+    { to: "/Experience", label: "Experience" },
     { to: "/pricing", label: "Pricing" },
     { to: "/contact", label: "Contact" },
   ]

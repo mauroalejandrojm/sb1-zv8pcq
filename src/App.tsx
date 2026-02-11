@@ -5,7 +5,7 @@ const Footer = React.lazy(() => import('./components/Footer'))
 const Home = React.lazy(() => import('./pages/Home'))
 const Products = React.lazy(() => import('./pages/Products'))
 const Services = React.lazy(() => import('./pages/Services'))
-const Industries = React.lazy(() => import('./pages/Industries'))
+const Experience = React.lazy(() => import('./pages/Experience'))
 const Pricing = React.lazy(() => import('./pages/Pricing'))
 const Contact = React.lazy(() => import('./pages/Contact'))
 const AIAssistant = React.lazy(() => import('./pages/AIAssistant'))
@@ -40,7 +40,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/industries" element={<Industries />} />
+              <Route path="/Experience" element={<Experience />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/products/ai-assistant" element={<AIAssistant />} />
