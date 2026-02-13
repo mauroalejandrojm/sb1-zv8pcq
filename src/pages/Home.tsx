@@ -66,8 +66,8 @@ const Home: React.FC = () => {
             Turn Your Company Knowledge & Data Into
             <span className="text-indigo-600 dark:text-indigo-400"> Intelligent Systems</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            We build AI assistants, analytics tools, and automation systems for teams overwhelmed by data.
+          <p className="text-l md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          We help small businesses & startups adopt AI to automate workflows and improve efficiency, eliminating the need for an in-house AI team.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
@@ -78,10 +78,10 @@ const Home: React.FC = () => {
             </Link>
 
             <Link
-              to="/pricing"
+              to="/experience"
               className="btn bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-3 px-8 rounded-full"
             >
-              View Pricing
+              See our Experience
             </Link>
           </div>
         </div>
@@ -93,6 +93,10 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             Our Core AI Systems
           </h2>
+
+          <p className="text-gray-600 dark:text-gray-300 mb-10 text-center">
+          Our core systems showcase what’s possible. Your business defines what’s next.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -133,9 +137,10 @@ const Home: React.FC = () => {
     <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">
       Problems We Help Solve
     </h2>
-
+    <p className="text-gray-600 dark:text-gray-300 mb-10 text-center">
+    Turning complex business challenges into intelligent solutions.
+    </p>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
       <div className="text-center">
         <Search className="h-12 w-12 text-indigo-600 dark:text-indigo-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold mb-2">
@@ -188,6 +193,9 @@ const Home: React.FC = () => {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Transforming Data into Actionable Insights</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-10 text-center">
+            Because data is useless without action.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="border-l-4 border-gray-500 dark:border-gray-400 dark:bg-gray-800 p-6">
               <h3 className="text-xl font-semibold mb-2">01 — Structure Your Data</h3>
