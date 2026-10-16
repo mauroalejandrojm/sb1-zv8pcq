@@ -1,58 +1,61 @@
-import React, { useState, useEffect, Suspense } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-const Header = React.lazy(() => import('./components/Header'))
-const Footer = React.lazy(() => import('./components/Footer'))
-const Home = React.lazy(() => import('./pages/Home'))
-const Products = React.lazy(() => import('./pages/Products'))
-const Services = React.lazy(() => import('./pages/Services'))
-const Experience = React.lazy(() => import('./pages/Experience'))
-const Pricing = React.lazy(() => import('./pages/Pricing'))
-const Contact = React.lazy(() => import('./pages/Contact'))
-const AIAssistant = React.lazy(() => import('./pages/AIAssistant'))
-const DataVault = React.lazy(() => import('./pages/DataVault'))
-const InsightEngine = React.lazy(() => import('./pages/InsightEngine'))
-const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'))
+import { Toaster } from "@/components/ui/toaster"
+import { QueryClientProvider } from '@tanstack/react-query'
+import { queryClientInstance } from '@/lib/query-client'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PageNotFound from './lib/PageNotFound';
+import { AuthProvider, useAuth } from '@/lib/AuthContext';
+import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import ScrollToTop from './components/ScrollToTop';
+import ThemeProvider from '@/components/ThemeProvider';
+import SiteLayout from '@/components/SiteLayout';
+import Home from '@/pages/Home';
+import Experience from '@/pages/Experience';
+import Contact from '@/pages/Contact';
+import Products from '@/pages/Products';
+import Services from '@/pages/Services';
 
-function App() {
-  const [darkMode, setDarkMode] = useState(false)
+const AppShell = () => {
+  const { isLoadingPublicSettings, authError } = useAuth();
 
-  useEffect(() => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true'
-    setDarkMode(isDarkMode)
-  }, [])
+  if (isLoadingPublicSettings) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-background">
+        <div className="w-8 h-8 border-4 border-border border-t-foreground rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', darkMode)
-    localStorage.setItem('darkMode', darkMode.toString())
-  }, [darkMode])
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
+  if (authError?.type === 'user_not_registered') {
+    return <UserNotRegisteredError />;
   }
 
   return (
-    <Router>
-      <div className={`min-h-screen flex flex-col ${darkMode ? 'dark' : ''}`}>
-        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
-          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          <main className="flex-grow bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/Experience" element={<Experience />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/products/ai-assistant" element={<AIAssistant />} />
-              <Route path="/products/data-vault" element={<DataVault />} />
-              <Route path="/products/insight-engine" element={<InsightEngine />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            </Routes>
-          </main>
-          <Footer />
-        </Suspense>
-      </div>
-    </Router>
+    <Routes>
+      <Route element={<SiteLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
+          <Router>
+            <ScrollToTop />
+            <AppShell />
+          </Router>
+          <Toaster />
+        </QueryClientProvider>
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 

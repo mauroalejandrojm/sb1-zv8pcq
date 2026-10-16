@@ -7,6 +7,12 @@ export default defineConfig({
   plugins: [react(),
   Sitemap({ hostname: "https://madnesslab.dev" }),
   ],
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@components': '/src/components',
+    }
+  },
   build: {
     minify: 'esbuild', // Faster minification
     chunkSizeWarningLimit: 500, // Adjust to avoid warnings
