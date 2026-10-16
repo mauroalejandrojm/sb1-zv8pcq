@@ -42,7 +42,7 @@ export default function Home() {
           fadeAngle={0} 
           fadeStart={50} 
           fadeEnd={50} 
-          darkness={resolvedTheme === "dark" ? 0.65 : 0} 
+          darkness={resolvedTheme === "dark" ? 0.60 : 0} 
           backdropBlur={25} 
           backdropBrightness={1.5} 
           fade={true} />
