@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import PigmentDrift from '@/components/PigmentDrift';
 import { MLLogo } from '@/components/Logo';
+import { useTheme } from 'next-themes';
 
 export default function Footer() {
   const [reduced, setReduced] = useState(false);
+  const { resolvedTheme } = useTheme();
 
+  console.log(resolvedTheme);
   React.useEffect(() => {
     if (reduced) document.documentElement.classList.add('drift-paused');
     else document.documentElement.classList.remove('drift-paused');
@@ -14,7 +17,16 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t border-border">
-      <PigmentDrift variant="cta" imageAngle={0} fadeAngle={0} fadeStart={0} fadeEnd={100} darkness={0} backdropBlur={100} backdropBrightness={1.5} fade={true} />
+      <PigmentDrift 
+        variant="cta" 
+        imageAngle={0} 
+        fadeAngle={0} 
+        fadeStart={50} 
+        fadeEnd={100} 
+        darkness={resolvedTheme === "dark" ? 0.7 : 0}
+        backdropBlur={100} 
+        backdropBrightness={1.5} 
+        fade={true} />
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 py-16">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">

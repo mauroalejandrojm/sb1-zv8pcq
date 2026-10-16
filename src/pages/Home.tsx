@@ -10,8 +10,7 @@ import StatsStrip from '@/components/home/StatsStrip';
 import RiskSection from '@/components/home/RiskSection';
 import Differentiators from '@/components/home/Differentiators';
 import LogoStrip from '@/components/home/LogoStrip';
-
-
+import { useTheme } from 'next-themes';
 
 const entries = [
   {
@@ -33,11 +32,20 @@ const entries = [
 ];
 
 export default function Home() {
+  const { resolvedTheme } = useTheme();
   return (
     <div className="overflow-hidden">
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center">
-        <PigmentDrift imageAngle={180} fadeAngle={0} fadeStart={50} fadeEnd={50} darkness={0} backdropBlur={25} backdropBrightness={1.5} fade={true} />
+        <PigmentDrift 
+          imageAngle={180} 
+          fadeAngle={0} 
+          fadeStart={50} 
+          fadeEnd={50} 
+          darkness={resolvedTheme === "dark" ? 0.65 : 0} 
+          backdropBlur={25} 
+          backdropBrightness={1.5} 
+          fade={true} />
         <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-8 lg:items-center lg:px-12 py-20">
           <div className="lg:col-span-6 animate-fade-up">
             <span className="font-mono-label text-foreground/70">/ The antidote to black-box AI</span>
