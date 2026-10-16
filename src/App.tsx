@@ -13,6 +13,7 @@ import Experience from '@/pages/Experience';
 import Contact from '@/pages/Contact';
 import Products from '@/pages/Products';
 import Services from '@/pages/Services';
+import ProductDetailRoute from '@/pages/ProductDetailRoute';
 
 const AppShell = () => {
   const { isLoadingPublicSettings, authError } = useAuth();
@@ -34,6 +35,7 @@ const AppShell = () => {
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<ProductDetailRoute />} />
         <Route path="/services" element={<Services />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
