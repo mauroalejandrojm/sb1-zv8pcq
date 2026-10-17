@@ -99,18 +99,26 @@ export default function Products() {
           <SectionMarker label="Our Products" index={1} total={1} />
 
           <div className="space-y-20 sm:space-y-28">
-            {products.map((prod, i) => (
-              <div
-                key={prod.n}
-                className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14"
-              >
-                <div
-                  className={`relative min-h-[400px] self-start overflow-hidden rounded-2xl bg-background sm:min-h-[400px] lg:col-span-7 ${
-                    i % 2 === 1 ? 'lg:order-2' : ''
-                  }`}
+            {products.map((prod, i) => {
+              const Icon = prod.icon;
+              const Figure = prod.Fig;
+
+              return (
+                <article
+                  key={prod.n}
+                  className="product-reveal grid min-w-0 items-center gap-10 lg:grid-cols-12 lg:gap-14"
+                  style={{ '--reveal-delay': `${i * 100}ms` }}
                 >
-                  <prod.Fig />
-                </div>
+                  {/* ILLUSTRATION */}
+                  <div
+                    className={`product-visual relative isolate h-[400px] min-w-0 overflow-hidden rounded-2xl bg-card sm:h-[440px] lg:col-span-7 lg:h-[480px] ${
+                      i % 2 === 1 ? 'lg:order-2' : ''
+                    }`}
+                  >
+                    <div className="product-visual-inner absolute bg-background inset-0 min-w-0 pt-10">
+                      <Figure />
+                    </div>
+                  </div>
 
                   {/* PRODUCT DETAILS */}
                   <div
