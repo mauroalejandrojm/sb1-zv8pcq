@@ -96,7 +96,7 @@ export default function Products() {
       {/* PRODUCTS */}
       <section className="relative border-t border-border sm:py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <div className="py-8 lg:py-0">
+          <div className="py-8 lg:py-8 mt-10">
             <SectionMarker label="Our Products" index={1} total={1} />
           </div>
 
