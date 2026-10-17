@@ -92,7 +92,7 @@ export default function Home() {
       {/* PRODUCTS & SERVICES ENTRY */}
       <section className="relative border-t border-border py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <SectionMarker label="What We Do" index={4} />
+          <SectionMarker label="What We Do" index={4} total={5} />
           <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
             <h2 className="lg:col-span-7 font-heading text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
               Two ways to work with MadnessLab.

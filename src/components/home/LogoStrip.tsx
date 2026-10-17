@@ -90,7 +90,7 @@ export default function LogoStrip() {
   return (
     <section className="relative border-t border-border py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-        <SectionMarker label="Our Technology" index={5} />
+        <SectionMarker label="Our Technology" index={5} total={5} />
 
         {/* Compact editorial heading */}
         <div className="mt-8 grid gap-4 lg:grid-cols-12 lg:items-end">

@@ -83,9 +83,9 @@ export default function ProductDetailPage({
 
             {/* PRODUCT SUMMARY PANEL */}
             <div className="relative lg:col-span-5">
-              <div className="absolute -inset-3 rounded-3xl border border-border/50" />
+              <div className="absolute -inset-3 rounded-3xl border border-border/50 bg-card" />
 
-              <div className="relative rounded-2xl border border-border bg-background/90 p-6 shadow-sm sm:p-8">
+              <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8 lg:p-12">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <span className="font-mono-label text-xs text-foreground/50">
@@ -158,7 +158,7 @@ export default function ProductDetailPage({
                 return (
                   <article
                     key={feature.title}
-                    className="group rounded-2xl border border-border bg-background p-6 transition-colors hover:border-[rgb(var(--drift-1))]/50 sm:p-7"
+                    className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-[rgb(var(--drift-1))]/50 sm:p-7"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <h3 className="font-heading text-lg font-bold">
@@ -202,7 +202,7 @@ export default function ProductDetailPage({
               return (
                 <article
                   key={step.title}
-                  className="relative rounded-2xl border border-border bg-background p-6 sm:p-8"
+                  className="relative rounded-2xl border border-border bg-card p-6 sm:p-8"
                 >
                   <div className="flex items-center justify-between">
                     <span className="font-mono-label text-sm text-foreground/45">

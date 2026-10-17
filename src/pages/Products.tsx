@@ -7,6 +7,7 @@ import KnowledgeCore from '@/components/iso/KnowledgeCore';
 import InsightsEngine from '@/components/iso/InsightsEngine';
 import WorkflowAutomation from '@/components/iso/WorkflowAutomation';
 import UnstructuredIntelligence from '@/components/iso/UnstructuredIntelligence';
+import SectionMarker from '@/components/SectionMarker';
 
 const products = [
   {
@@ -85,8 +86,9 @@ export default function Products() {
       </section>
 
       {/* PLATFORMS */}
-      <section className="relative border-t border-border py-20 sm:py-28">
+      <section className="relative border-t border-border sm:py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <SectionMarker label="Our Products" index={1} total={1} />
           <div className="space-y-20 sm:space-y-28">
             {products.map((prod, i) => (
               <div
@@ -94,7 +96,7 @@ export default function Products() {
                 className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14"
               >
                 <div
-                  className={`relative overflow-hidden rounded-2xl bg-background lg:col-span-7 ${
+                  className={`relative min-h-[800px] self-start overflow-hidden rounded-2xl bg-background sm:min-h-[800px] lg:col-span-7 ${
                     i % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >

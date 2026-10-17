@@ -121,7 +121,7 @@ export default function Services() {
       {/* CHALLENGES */}
       <section className="relative border-t border-border py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <SectionMarker label="Challenges We Tackle" index={2} />
+          <SectionMarker label="Challenges We Tackle" index={1} total={3} />
 
           <h2 className="mt-10 max-w-3xl font-heading text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             Turning complex business challenges into intelligent solutions.
@@ -155,7 +155,7 @@ export default function Services() {
       {/* SERVICES */}
       <section className="relative border-t border-border py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <SectionMarker label="What We Do" index={3} />
+          <SectionMarker label="What We Do" index={2} total={3} />
 
           <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
             <h2 className="font-heading text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:col-span-7">
@@ -199,7 +199,7 @@ export default function Services() {
       {/* PROCESS */}
       <section className="relative border-t border-border py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <SectionMarker label="Process" index={4} />
+          <SectionMarker label="Process" index={3} total={3} />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
             <h2 className="font-heading text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:col-span-7">
