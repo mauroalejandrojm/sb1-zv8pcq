@@ -96,7 +96,7 @@ export default function Products() {
                 className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14"
               >
                 <div
-                  className={`relative min-h-[800px] self-start overflow-hidden rounded-2xl bg-background sm:min-h-[800px] lg:col-span-7 ${
+                  className={`relative min-h-[400px] self-start overflow-hidden rounded-2xl bg-background sm:min-h-[400px] lg:col-span-7 ${
                     i % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >
