@@ -47,9 +47,9 @@ export default function Home() {
           backdropBrightness={1.5} 
           fade={true} />
         <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-8 lg:items-center lg:px-12 py-20">
-          <div className="lg:col-span-6 animate-fade-up">
+          <div className="min-w-0 lg:col-span-6 animate-fade-up">
             <span className="font-mono-label text-foreground/70">/ The antidote to black-box AI</span>
-            <h1 className="mt-6 font-heading text-[2.6rem] font-extrabold leading-[0.95] tracking-tight sm:text-6xl lg:text-[4.4rem]">
+            <h1 className="mt-6 font-heading text-[clamp(2rem,9vw,2.6rem)] font-extrabold leading-[0.95] tracking-tight sm:text-6xl lg:text-[4.4rem]">
               Turn your company knowledge <span className="drift-text">&amp; data</span> into intelligent systems.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/70 sm:text-lg">
