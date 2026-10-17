@@ -1,7 +1,13 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Database, LineChart, Workflow, Layers, ArrowRight } from 'lucide-react';
-import PigmentDrift from '@/components/PigmentDrift';
+import {
+  Database,
+  LineChart,
+  Workflow,
+  Layers,
+  ArrowRight,
+} from 'lucide-react';
 import CTA from '@/components/CTA';
 import KnowledgeCore from '@/components/iso/KnowledgeCore';
 import InsightsEngine from '@/components/iso/InsightsEngine';
@@ -47,7 +53,6 @@ const products = [
       'Human-in-the-loop approvals on sensitive actions',
       'Retries, exception handling & a full audit trail',
     ],
-    // Replace with the actual detail route if one exists.
     link: '/products/workflow-automation',
   },
   {
@@ -61,99 +66,112 @@ const products = [
       'Entity resolution, schema mapping & business-rule validation',
       'Human review for conflicts; provenance kept on every record',
     ],
-    // Replace with the actual detail route if one exists.
     link: '/products/data-vault',
   },
 ];
 
 export default function Products() {
   return (
-    <div className="overflow-hidden">
+    <main className="products-page overflow-x-clip">
       {/* HEADER */}
       <section className="relative">
-        <div className="relative z-10 mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-20 lg:px-12">
-          <span className="font-mono-label text-foreground/70">/ Products</span>
+        <div className="relative z-10 mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12">
+          <span className="font-mono-label text-foreground/70">
+            / Products
+          </span>
 
           <h1 className="mt-6 max-w-3xl font-heading text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl">
-            Four platforms. <span className="drift-text">One engineered core.</span>
+            Four platforms.{' '}
+            <span className="drift-text">One engineered core.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/70 sm:text-lg">
-            Each product is a proven system architecture — transparent by design, so you see exactly
-            how the layers connect, from raw data to the answers your team acts on.
+            Each product is a proven system architecture — transparent by
+            design, so you see exactly how the layers connect, from raw data
+            to the answers your team acts on.
           </p>
         </div>
       </section>
 
-      {/* PLATFORMS */}
+      {/* PRODUCTS */}
       <section className="relative border-t border-border sm:py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <SectionMarker label="Our Products" index={1} total={1} />
+
           <div className="space-y-20 sm:space-y-28">
-            {products.map((prod, i) => (
-              <div
-                key={prod.n}
-                className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14"
-              >
-                <div
-                  className={`relative min-h-[400px] self-start overflow-hidden rounded-2xl bg-background sm:min-h-[400px] lg:col-span-7 ${
-                    i % 2 === 1 ? 'lg:order-2' : ''
-                  }`}
-                >
-                  <prod.Fig />
-                </div>
+            {products.map((prod, i) => {
+              const Icon = prod.icon;
+              const Figure = prod.Fig;
 
-                <div
-                  className={`lg:col-span-5 ${
-                    i % 2 === 1 ? 'lg:order-1' : ''
-                  }`}
+              return (
+                <article
+                  key={prod.n}
+                  className="product-reveal grid min-w-0 items-center gap-10 lg:grid-cols-12 lg:gap-14"
+                  style={{ '--reveal-delay': `${i * 100}ms` }}
                 >
-                  <div className="flex items-center gap-2">
-                    <prod.icon className="h-5 w-5 text-[rgb(var(--drift-1))] dark:text-indigo-400" />
-                    <span className="font-mono-label text-base text-muted-foreground">
-                      [ {prod.n} ]
-                    </span>
+                  {/* ILLUSTRATION */}
+                  <div
+                    className={`product-visual relative isolate h-[400px] min-w-0 overflow-hidden rounded-2xl bg-card sm:h-[440px] lg:col-span-7 lg:h-[480px] ${
+                      i % 2 === 1 ? 'lg:order-2' : ''
+                    }`}
+                  >
+                    <div className="product-visual-inner absolute bg-background inset-0 min-w-0 pt-10">
+                      <Figure />
+                    </div>
                   </div>
 
-                  <h2 className="mt-3 font-heading text-2xl font-bold tracking-tight sm:text-3xl">
-                    {prod.title}
-                  </h2>
+                  {/* PRODUCT DETAILS */}
+                  <div
+                    className={`min-w-0 lg:col-span-5 ${
+                      i % 2 === 1 ? 'lg:order-1' : ''
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Icon className="h-5 w-5 shrink-0 text-[rgb(var(--drift-1))] dark:text-indigo-400" />
+                      <span className="font-mono-label text-base text-muted-foreground">
+                        [ {prod.n} ]
+                      </span>
+                    </div>
 
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    {prod.body}
-                  </p>
+                    <h2 className="mt-3 font-heading text-2xl font-bold tracking-tight sm:text-3xl">
+                      {prod.title}
+                    </h2>
 
-                  <ul className="mt-6 space-y-2.5">
-                    {prod.points.map((pt) => (
-                      <li
-                        key={pt}
-                        className="flex items-start gap-2.5 text-sm text-foreground/80"
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      {prod.body}
+                    </p>
+
+                    <ul className="mt-6 space-y-2.5">
+                      {prod.points.map((point) => (
+                        <li
+                          key={point}
+                          className="flex items-start gap-2.5 text-sm text-foreground/80"
+                        >
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[rgb(var(--drift-1))] dark:bg-indigo-400" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-7">
+                      <Link
+                        to={prod.link}
+                        aria-label={`Learn more about ${prod.title}`}
+                        className="product-link group inline-flex items-center gap-2 font-medium text-indigo-600 dark:text-indigo-400"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[rgb(var(--drift-1))] dark:bg-indigo-400" />
-                        <span>{pt}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* PRODUCT DETAIL LINK */}
-                  <div className="mt-7">
-                    <Link
-                      to={prod.link}
-                      aria-label={`Learn more about ${prod.title}`}
-                      className="group inline-flex items-center gap-2 font-medium text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
-                    >
-                      Explore {prod.title}
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
+                        Explore {prod.title}
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <CTA />
-    </div>
+    </main>
   );
 }
