@@ -63,7 +63,7 @@ export default function Experience() {
   return (
     <div className="overflow-hidden">
       <section className="relative border-b border-border">
-        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 py-10 sm:py-20">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12">
           <span className="font-mono-label text-foreground/70 mt-1.5">/ Experience</span>
           <h1 className="mt-10 max-w-4xl font-heading text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl">
             Challenges we help <span className="drift-text">solve.</span>
