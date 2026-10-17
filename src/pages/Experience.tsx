@@ -77,7 +77,9 @@ export default function Experience() {
 
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 mt-6">
-          <SectionMarker label="Out Experience" index={1} total={2}/>
+          <div className="py-8 lg:py-0">
+            <SectionMarker label="Out Experience" index={1} total={2} />
+          </div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border">
             {challenges.map((c, i) => (
               <div

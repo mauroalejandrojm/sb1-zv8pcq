@@ -121,7 +121,9 @@ export default function Services() {
       {/* CHALLENGES */}
       <section className="relative border-t border-border py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <SectionMarker label="Challenges We Tackle" index={1} total={3} />
+          <div className="py-8 lg:py-0">
+            <SectionMarker label="Challenges We Tackle" index={1} total={3} />
+          </div>
 
           <h2 className="mt-10 max-w-3xl font-heading text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             Turning complex business challenges into intelligent solutions.
