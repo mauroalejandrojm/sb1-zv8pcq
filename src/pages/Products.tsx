@@ -96,9 +96,11 @@ export default function Products() {
       {/* PRODUCTS */}
       <section className="relative border-t border-border sm:py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <SectionMarker label="Our Products" index={1} total={1} />
+          <div className="py-8 lg:py-0">
+            <SectionMarker label="Our Products" index={1} total={1} />
+          </div>
 
-          <div className="space-y-20 sm:space-y-28">
+          <div className="space-y-10 sm:space-y-10">
             {products.map((prod, i) => {
               const Icon = prod.icon;
               const Figure = prod.Fig;
@@ -111,8 +113,8 @@ export default function Products() {
                 >
                   {/* ILLUSTRATION */}
                   <div
-                    className={`product-visual relative isolate h-[400px] min-w-0 overflow-hidden rounded-2xl bg-card sm:h-[440px] lg:col-span-7 lg:h-[480px] ${
-                      i % 2 === 1 ? 'lg:order-2' : ''
+                    className={`product-visual order-2 relative isolate h-[400px] min-w-0 overflow-hidden rounded-2xl bg-card sm:h-[440px] lg:col-span-7 lg:h-[480px] ${
+                      i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'
                     }`}
                   >
                     <div className="product-visual-inner absolute bg-background inset-0 min-w-0 pt-10">
@@ -122,8 +124,8 @@ export default function Products() {
 
                   {/* PRODUCT DETAILS */}
                   <div
-                    className={`min-w-0 lg:col-span-5 ${
-                      i % 2 === 1 ? 'lg:order-1' : ''
+                    className={`order-1 min-w-0 lg:col-span-5 ${
+                      i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'
                     }`}
                   >
                     <div className="flex items-center gap-2">
