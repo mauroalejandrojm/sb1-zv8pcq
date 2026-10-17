@@ -96,44 +96,32 @@ export default function Products() {
       {/* PRODUCTS */}
       <section className="relative border-t border-border sm:py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <div className="py-8 lg:py-0">
-            <SectionMarker label="Our Products" index={1} total={1} />
-          </div>
-
-          <div className="space-y-10 sm:space-y-10">
-            {products.map((prod, i) => {
-              const Icon = prod.icon;
-              const Figure = prod.Fig;
-
-              return (
-                <article
-                  key={prod.n}
-                  className="product-reveal grid min-w-0 items-center gap-10 lg:grid-cols-12 lg:gap-14"
-                  style={{ '--reveal-delay': `${i * 100}ms` }}
+          <SectionMarker label="Our Products" index={1} total={1} />
+          <div className="space-y-20 sm:space-y-28">
+            {products.map((prod, i) => (
+              <div
+                key={prod.n}
+                className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14"
+              >
+                <div
+                  className={`relative min-h-[400px] self-start overflow-hidden rounded-2xl bg-background sm:min-h-[400px] lg:col-span-7 ${
+                    i % 2 === 1 ? 'lg:order-2' : ''
+                  }`}
                 >
-                  {/* ILLUSTRATION */}
-                  <div
-                    className={`product-visual order-2 relative isolate h-[400px] min-w-0 overflow-hidden rounded-2xl bg-card sm:h-[440px] lg:col-span-7 lg:h-[480px] ${
-                      i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'
-                    }`}
-                  >
-                    <div className="product-visual-inner absolute bg-background inset-0 min-w-0 pt-10">
-                      <Figure />
-                    </div>
-                  </div>
+                  <prod.Fig />
+                </div>
 
-                  {/* PRODUCT DETAILS */}
-                  <div
-                    className={`order-1 min-w-0 lg:col-span-5 ${
-                      i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'
-                    }`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Icon className="h-5 w-5 shrink-0 text-[rgb(var(--drift-1))] dark:text-indigo-400" />
-                      <span className="font-mono-label text-base text-muted-foreground">
-                        [ {prod.n} ]
-                      </span>
-                    </div>
+                <div
+                  className={`lg:col-span-5 ${
+                    i % 2 === 1 ? 'lg:order-1' : ''
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <prod.icon className="h-5 w-5 text-[rgb(var(--drift-1))] dark:text-indigo-400" />
+                    <span className="font-mono-label text-base text-muted-foreground">
+                      [ {prod.n} ]
+                    </span>
+                  </div>
 
                     <h2 className="mt-3 font-heading text-2xl font-bold tracking-tight sm:text-3xl">
                       {prod.title}
