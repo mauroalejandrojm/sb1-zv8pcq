@@ -3,16 +3,12 @@ import { Link } from 'react-router-dom';
 import { Database, LineChart, Workflow, Layers, ArrowRight } from 'lucide-react';
 import PigmentDrift from '@/components/PigmentDrift';
 import CTA from '@/components/CTA';
-import KnowledgeCore from '@/components/iso/KnowledgeCore';
-import InsightsEngine from '@/components/iso/InsightsEngine';
-import WorkflowAutomation from '@/components/iso/WorkflowAutomation';
-import DataFoundry from '@/components/iso/DataFoundry';
 
 const products = [
   {
     n: '01',
     icon: Database,
-    Fig: KnowledgeCore,
+    // Fig: KnowledgeCore,
     title: 'AI Knowledge System',
     body: 'Employees ask in natural language; the system retrieves across documents, databases and institutional knowledge, follows the relationships between them, and returns grounded answers — every claim cited to its source.',
     points: [
@@ -25,7 +21,7 @@ const products = [
   {
     n: '02',
     icon: LineChart,
-    Fig: InsightsEngine,
+    // Fig: InsightsEngine,
     title: 'Insight Engine',
     body: 'A business question becomes an interactive analytical experience — a live chart your team re-cuts with filters, dimensions and date ranges, with anomalies explained and forecasts shown with their uncertainty.',
     points: [
@@ -38,7 +34,7 @@ const products = [
   {
     n: '03',
     icon: Workflow,
-    Fig: WorkflowAutomation,
+    // Fig: WorkflowAutomation,
     title: 'AI Workflow Automation',
     body: 'Describe the outcome; the system builds a workflow of triggers, decisions, transformations and tool calls across your apps — with sensitive actions paused for human approval and every step logged.',
     points: [
@@ -52,7 +48,7 @@ const products = [
   {
     n: '04',
     icon: Layers,
-    Fig: DataFoundry,
+    // Fig: DataFoundry,
     title: 'Unstructured Data Intelligence',
     body: 'Whiteboards, notes, PDFs, contracts and transcripts become validated, machine-readable records — entities resolved, mapped to your schema and checked against business rules, every fact traceable to its source.',
     points: [
@@ -98,7 +94,7 @@ export default function Products() {
                     i % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >
-                  <prod.Fig />
+                  {/* <prod.Fig /> */}
                 </div>
 
                 <div
