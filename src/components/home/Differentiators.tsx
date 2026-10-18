@@ -29,7 +29,7 @@ export default function Differentiators() {
   return (
     <section className="relative border-t border-border py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-        <SectionMarker label="Why MadnessLab" index={3} total={5} />
+        <SectionMarker label="Why MadnessLab" index={2} total={4} />
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
           <h2 className="lg:col-span-7 font-heading text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             Knowledge beats the <span className="drift-text">black box.</span>
