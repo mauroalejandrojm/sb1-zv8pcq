@@ -114,9 +114,6 @@
 
 .pigment-drift__tex {
   /* Make the layer large enough so rotation never exposes empty corners */
-  width: 150vmax;
-  height: 150vmax;
-  flex-shrink: 0;
   position: absolute;
   inset: 0;
   background-position: center;
