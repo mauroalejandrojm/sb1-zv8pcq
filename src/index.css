@@ -116,12 +116,20 @@
 }
 
 .pigment-drift__tex {
-  /* Make the layer large enough so rotation never exposes empty corners */
   position: absolute;
   inset: 0;
   background-position: center;
   background-repeat: no-repeat;
   transform-origin: center;
+}
+
+/* Mobile portrait fix: match the desktop framing without over-zooming */
+@media (max-width: 767px) and (orientation: portrait) {
+  .pigment-drift__tex {
+    /* Scales relative to viewport width instead of stretching to the tall height */
+    background-size: 220% auto !important;
+    background-position: 75% 0% !important;
+  }
 }
 
 /* Adjustable black dimming layer */
