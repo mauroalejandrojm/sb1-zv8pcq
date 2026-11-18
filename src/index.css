@@ -124,15 +124,6 @@
   transform-origin: center;
 }
 
-/* Mobile portrait adjustment */
-@media (max-width: 767px) and (orientation: portrait) {
-  .pigment-drift__tex {
-    /* Prevents extreme zoom on tall mobile screens */
-    background-size: 100% auto !important; 
-    background-position: center top !important;
-  }
-}
-
 /* Adjustable black dimming layer */
 /* Independent black overlay */
 .pigment-drift__shade {
