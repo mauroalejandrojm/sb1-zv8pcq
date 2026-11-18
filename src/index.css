@@ -102,22 +102,35 @@
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  z-index: 0;
-  isolation: isolate;
 }
 
 .pigment-drift__rotation {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pigment-drift__tex {
+  /* Make the layer large enough so rotation never exposes empty corners */
+  width: 150vmax;
+  height: 150vmax;
+  flex-shrink: 0;
   position: absolute;
   inset: 0;
   background-position: center;
   background-repeat: no-repeat;
   transform-origin: center;
+}
+
+/* Mobile portrait adjustment */
+@media (max-width: 767px) and (orientation: portrait) {
+  .pigment-drift__tex {
+    /* Prevents extreme zoom on tall mobile screens */
+    background-size: 180% auto !important; 
+    background-position: center top !important;
+  }
 }
 
 /* Adjustable black dimming layer */
